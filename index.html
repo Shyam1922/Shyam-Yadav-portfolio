@@ -28,6 +28,7 @@
     <nav class="nav__links" id="navLinks" aria-label="Primary">
       <a href="#projects" data-link>Projects</a>
       <a href="#details" data-link>Details</a>
+      <a href="#stack" data-link>Stack</a>
       <a href="#experience" data-link>Experience</a>
       <a href="#contact" data-link>Contact</a>
     </nav>
@@ -74,7 +75,7 @@
     <section class="projects" id="projects" aria-label="Projects">
 
       <!-- 01 · AdPilot AI -->
-      <article class="project">
+      <article class="project" id="adpilot">
         <div class="project__text">
           <p class="project__index reveal"><span>01</span> Generative AI · Full stack</p>
           <h2 class="project__title reveal" style="--d:.1s">AdPilot AI</h2>
@@ -96,16 +97,9 @@
         </div>
         <div class="project__visual reveal reveal--visual">
           <div class="device device--laptop">
-            <div class="screen">
-              <div class="mock mock-ad">
-                <div class="mock__top"><b>Campaign · Diwali drop</b><span class="chips"><i class="on">EN</i><i>Hinglish</i><i>हिंदी</i></span></div>
-                <div class="mock-ad__grid">
-                  <div class="ad-card"><div class="ad-card__img a1"></div><p>Hand-poured soy candles</p><small><em class="ok">✓ sourced</em></small></div>
-                  <div class="ad-card"><div class="ad-card__img a2"><span class="play"></span></div><p>15s video ad · MP4</p><small><em class="ok">✓ sourced</em></small></div>
-                  <div class="ad-card"><div class="ad-card__img a3"></div><p>"Lasts 60 hours"</p><small><em class="warn">! needs fact</em></small></div>
-                </div>
-                <div class="mock-ad__rank"><span>Top creative</span><div class="bar"><i style="--w:78%"></i></div><span>0.71 ± 0.06</span></div>
-              </div>
+            <!-- Tall screenshot: scrolls through the page on hover -->
+            <div class="screen screen--scroll">
+              <img src="assets/projects/adpilot-creatives.webp" alt="AdPilot AI creatives screen: an approved demo ad with copy, claim guard, platform copy and a video ad storyboard" loading="lazy" />
             </div>
             <div class="device__base"></div>
           </div>
@@ -113,7 +107,7 @@
       </article>
 
       <!-- 02 · Pollution Blame Ledger -->
-      <article class="project project--alt">
+      <article class="project project--alt" id="pollution-ledger">
         <div class="project__text">
           <p class="project__index reveal"><span>02</span> Bayesian modelling · Data science</p>
           <h2 class="project__title reveal" style="--d:.1s">Pollution Blame Ledger</h2>
@@ -134,27 +128,24 @@
           </div>
         </div>
         <div class="project__visual reveal reveal--visual">
-          <div class="device device--laptop">
-            <div class="screen">
-              <div class="mock mock-chart">
-                <div class="mock__top"><b>PM2.5 source share · Delhi, Nov</b><span class="mono">90% CI</span></div>
-                <ul class="ci">
-                  <li><span>Crop burning</span><div class="ci__track"><i style="--lo:28%;--hi:46%;--m:37%"></i></div></li>
-                  <li><span>Traffic</span><div class="ci__track"><i style="--lo:18%;--hi:31%;--m:24%"></i></div></li>
-                  <li><span>Dust</span><div class="ci__track"><i style="--lo:9%;--hi:20%;--m:14%"></i></div></li>
-                  <li><span>Industry</span><div class="ci__track"><i style="--lo:7%;--hi:16%;--m:11%"></i></div></li>
-                  <li><span>Background</span><div class="ci__track"><i style="--lo:8%;--hi:19%;--m:13%"></i></div></li>
-                </ul>
-                <p class="mock__foot mono">illustrative · NUTS · 4 chains · r̂ &lt; 1.01</p>
+          <div class="device-pair">
+            <div class="device device--laptop">
+              <div class="screen">
+                <img src="assets/projects/pollution-analysis.webp" alt="Pollution Blame Ledger analysis view: five pollution sources with share estimates, likely ranges and trust labels" loading="lazy" />
+              </div>
+              <div class="device__base"></div>
+            </div>
+            <div class="device device--phone">
+              <div class="screen">
+                <img src="assets/projects/pollution-mobile.webp" alt="Pollution Blame Ledger on a phone" loading="lazy" />
               </div>
             </div>
-            <div class="device__base"></div>
           </div>
         </div>
       </article>
 
       <!-- 03 · Ambedkar Digital Heritage Archive -->
-      <article class="project">
+      <article class="project" id="ambedkar-archive">
         <div class="project__text">
           <p class="project__index reveal"><span>03</span> Smart India Hackathon · Full stack</p>
           <h2 class="project__title reveal" style="--d:.1s">Ambedkar Digital Heritage Archive</h2>
@@ -177,17 +168,7 @@
         <div class="project__visual reveal reveal--visual">
           <div class="device device--laptop">
             <div class="screen">
-              <div class="mock mock-doc">
-                <aside class="mock-doc__side">
-                  <b>Timeline</b>
-                  <span>1916</span><span>1927</span><span class="on">1936</span><span>1949</span><span>1956</span>
-                </aside>
-                <div class="mock-doc__page">
-                  <div class="search">Ask the archive…</div>
-                  <div class="page"><i></i><i></i><i class="hl"></i><i></i><i></i><i class="short"></i></div>
-                  <div class="cite mono">↳ Annihilation of Caste · p. 42</div>
-                </div>
-              </div>
+              <img src="assets/projects/ambedkar-reader.webp" alt="Ambedkar Digital Heritage Archive reader: a scanned page of Annihilation of Caste beside its verified transcription" loading="lazy" />
             </div>
             <div class="device__base"></div>
           </div>
@@ -209,17 +190,68 @@
           I was a Track Winner at <strong>HackCBS 8.0</strong>, I'm in the Design Department of the Microsoft
           Student Chapter, and I'm open to internships and collaborations.
         </p>
-        <div class="skills reveal" style="--d:.4s">
-          <div><h3>Languages</h3><p>Python · C++ · C · SQL · TypeScript · JavaScript</p></div>
-          <div><h3>ML / AI</h3><p>PyTorch · Scikit-learn · NumPyro · YOLO · OpenCV · EasyOCR · Tesseract · Gemini API · NumPy · Pandas</p></div>
-          <div><h3>Frameworks</h3><p>FastAPI · Flask · SQLAlchemy · React · Vite · Tailwind CSS</p></div>
-          <div><h3>Tools</h3><p>Git · Docker · pytest · FFmpeg · SQLite · Jupyter</p></div>
-        </div>
+        <a class="btn btn--primary reveal" style="--d:.4s" href="#stack">See my stack</a>
       </div>
       <div class="details__photo reveal reveal--visual">
         <!-- EDIT: replace this div with <img src="assets/me.jpg" alt="Shyam Yadav"> -->
         <div class="photo-placeholder"><span>SY</span></div>
         <div class="photo-frame" aria-hidden="true"></div>
+      </div>
+    </section>
+
+    <!-- ========== STACK ========== -->
+    <!-- To add a tool: copy an <li>, drop its SVG in assets/icons/. No logo? use <span class="tech__glyph">AB</span> -->
+    <section class="stack" id="stack">
+      <p class="eyebrow reveal"><span class="dot"></span>My stack</p>
+      <div class="stack__group">
+        <h3 class="stack__label reveal">Languages</h3>
+        <ul class="tech">
+          <li class="reveal"><img src="assets/icons/python.svg" alt="" />Python</li>
+          <li class="reveal"><img src="assets/icons/cplusplus.svg" alt="" />C++</li>
+          <li class="reveal"><img src="assets/icons/c.svg" alt="" />C</li>
+          <li class="reveal"><img src="assets/icons/sql.svg" alt="" />SQL</li>
+          <li class="reveal"><img src="assets/icons/typescript.svg" alt="" />TypeScript</li>
+          <li class="reveal"><img src="assets/icons/javascript.svg" alt="" />JavaScript</li>
+        </ul>
+      </div>
+      <div class="stack__group">
+        <h3 class="stack__label reveal">ML / AI</h3>
+        <ul class="tech">
+          <li class="reveal"><img src="assets/icons/pytorch.svg" alt="" />PyTorch</li>
+          <li class="reveal"><img src="assets/icons/scikitlearn.svg" alt="" />Scikit-learn</li>
+          <li class="reveal"><span class="tech__glyph" style="--c:#e8590c">Np</span>NumPyro</li>
+          <li class="reveal"><span class="tech__glyph" style="--c:#0b23a9">YO</span>YOLO</li>
+          <li class="reveal"><img src="assets/icons/opencv.svg" alt="" />OpenCV</li>
+          <li class="reveal"><span class="tech__glyph" style="--c:#1f9d55">Eo</span>EasyOCR</li>
+          <li class="reveal"><span class="tech__glyph" style="--c:#3b5bdb">Ts</span>Tesseract OCR</li>
+          <li class="reveal"><img src="assets/icons/gemini.svg" alt="" />Gemini API</li>
+          <li class="reveal"><img src="assets/icons/numpy.svg" alt="" />NumPy</li>
+          <li class="reveal"><img src="assets/icons/pandas.svg" alt="" />Pandas</li>
+        </ul>
+      </div>
+      <div class="stack__group">
+        <h3 class="stack__label reveal">Frameworks</h3>
+        <ul class="tech">
+          <li class="reveal"><img src="assets/icons/fastapi.svg" alt="" />FastAPI</li>
+          <li class="reveal"><img src="assets/icons/flask.svg" alt="" />Flask</li>
+          <li class="reveal"><img src="assets/icons/sqlalchemy.svg" alt="" />SQLAlchemy</li>
+          <li class="reveal"><img src="assets/icons/react.svg" alt="" />React</li>
+          <li class="reveal"><img src="assets/icons/vite.svg" alt="" />Vite</li>
+          <li class="reveal"><img src="assets/icons/tailwind.svg" alt="" />Tailwind CSS</li>
+        </ul>
+      </div>
+      <div class="stack__group">
+        <h3 class="stack__label reveal">Tools</h3>
+        <ul class="tech">
+          <li class="reveal"><img src="assets/icons/git.svg" alt="" />Git</li>
+          <li class="reveal"><img src="assets/icons/github.svg" alt="" />GitHub</li>
+          <li class="reveal"><img src="assets/icons/docker.svg" alt="" />Docker</li>
+          <li class="reveal"><img src="assets/icons/pytest.svg" alt="" />pytest</li>
+          <li class="reveal"><img src="assets/icons/ffmpeg.svg" alt="" />FFmpeg</li>
+          <li class="reveal"><img src="assets/icons/sqlite.svg" alt="" />SQLite</li>
+          <li class="reveal"><img src="assets/icons/vscode.svg" alt="" />VS Code</li>
+          <li class="reveal"><img src="assets/icons/jupyter.svg" alt="" />Jupyter</li>
+        </ul>
       </div>
     </section>
 

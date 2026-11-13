@@ -18,14 +18,16 @@ Then open http://localhost:5500
 | `styles.css` | Colors (top of file, `:root`), layout, animations |
 | `script.js`  | Hero sphere, scrambling role word, scroll reveals, theme toggle, contact form |
 | `resume.pdf` | Local only (git-ignored) — contains your phone number |
-| `assets/`    | Put your photo and project screenshots here |
+| `assets/projects/` | Project screenshots (WebP, ~1100px wide) shown in the device frames |
+| `assets/icons/`    | Tech logos for the "My stack" section (devicon / simple-icons SVGs) |
 
 ## Things still to fill in (search `EDIT` in index.html)
 
-- GitHub and LinkedIn URLs (in the side nav)
-- GitHub repo link for each project (`href="#"` buttons)
 - Your photo: replace the `photo-placeholder` div with `<img src="assets/me.jpg" alt="Shyam Yadav">`
-- Optional: swap a project's mock screen for a real screenshot (`<img>` inside `.screen`)
+
+To change a project screenshot, drop a new image in `assets/projects/` and update the `<img>` inside that
+project's `.screen`. Add `screen--scroll` to the `.screen` for tall full-page shots: they scroll on hover.
+To add a tool to the stack, copy an `<li>` in the `#stack` section and put its SVG in `assets/icons/`.
 
 Change the rotating hero words in `script.js` (`const roles = [...]`).
 Change the accent color with `--accent` / `--accent-2` in `styles.css`.
