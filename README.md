@@ -17,7 +17,7 @@ Then open http://localhost:5500
 | `index.html` | All the content: hero, projects, about, stats, experience, contact |
 | `styles.css` | Colors (top of file, `:root`), layout, animations |
 | `script.js`  | Hero sphere, scrambling role word, scroll reveals, theme toggle, contact form |
-| `resume.pdf` | Local only (git-ignored) — contains your phone number |
+| `Shyam-Yadav-Resume.pdf` | Public résumé, phone number removed. Linked from the hero and Experience section |
 | `assets/projects/` | Project screenshots (WebP, ~1100px wide) shown in the device frames |
 | `assets/icons/`    | Tech logos for the "My stack" section (devicon / simple-icons SVGs) |
 
@@ -37,5 +37,6 @@ Change the accent color with `--accent` / `--accent-2` in `styles.css`.
 - **GitHub Pages:** push this folder to a repo → Settings → Pages → deploy from `main`.
 - **Netlify / Vercel:** drag and drop the folder, or import the repo.
 
-Note: `resume.pdf` is git-ignored because it includes your phone number. To add a Résumé button, make a
-phone-free PDF, remove `resume.pdf` from `.gitignore`, and point the hero's second button at `resume.pdf`.
+Note: the public résumé has no phone number. Keep your full original as `resume.pdf` or `resume-private.pdf`
+(both are git-ignored) and never commit it. When you update your résumé, replace `Shyam-Yadav-Resume.pdf`
+with a phone-free copy.

@@ -1,5 +1,6 @@
-# Contains a phone number — keep private
+# Private original of the resume (contains a phone number) - never publish
 resume.pdf
+resume-private.pdf
 
 # Local Claude Code preview config
 .claude/
